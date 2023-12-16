@@ -1,0 +1,98 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Thymeleaf</title>
+</head>
+<body>
+
+<th:form  th:action="@{/save}"  th:method="post">
+	<h2>User Form</h2>
+	<label>Enter User Name</label>
+	<br>
+	<input type="text" th:field="*{customer.name}" name="name" />
+	<br>
+	<br>
+	<label>Enter Email</label>
+	<br>
+	<input type="email" th:field="*{customer.email}" />
+	<br>
+	<br>
+	<label>Enter Adderess</label>
+	<br>
+	<input type="email" th:field="*{customer.address}" />
+	<br>
+	<br>
+	<input type="submit" value="Continue to schedule" class="btn btn-red" />
+</th:form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Customer Manager</title>
+</head>
+<body>
+
+	<div align="center">
+		<h2>Customer Manager</h2>
+
+		<form method="get" action="search">
+			<input type="text" name="keyword" /> &nbsp; <input type="submit"
+				value="Search" />
+		</form>
+
+		<h3>
+			<a href="${pageContext.request.contextPath}/new">New Customer</a>
+		</h3>
+
+		<table border="1" cellpadding="5">
+
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>E-mail</th>
+				<th>Address</th>
+				<th>Action</th>
+			</tr>
+			
+			<c:forEach items="${listCustomer}" var="customer">
+				<tr>
+					<td>${customer.id}</td>
+					<td>${customer.name}</td>
+					<td>${customer.email}</td>
+					<td>${customer.address}</td>
+					<td><a href="${pageContext.request.contextPath}/edit?id=${customer.id}">Edit</a>
+						&nbsp;&nbsp;&nbsp; <a href="${pageContext.request.contextPath}/delete?id=${customer.id}">Delete</a>
+					</td>
+				</tr>
+			</c:forEach>
+
+		</table>
+
+	</div>
+
+</body>
+</html>  -->
